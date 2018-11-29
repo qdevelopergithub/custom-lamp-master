@@ -1175,7 +1175,6 @@
             "thumbprintSslCert": "[if(or(empty(parameters('keyVaultResourceId')), empty(parameters('sslCertThumbprint'))), 'None', parameters('sslCertThumbprint'))]",
             "thumbprintCaCert": "[if(or(empty(parameters('keyVaultResourceId')), empty(parameters('caCertThumbprint'))), 'None', parameters('caCertThumbprint'))]",
             "tikaNicName": "[concat('tika-vm-nic-',variables('resourceprefix'))]",
-            "tikaScriptFilename": "install_tika.sh",
             "tikaService": "[parameters('tikaService')]",
             "tikaVmIP": "[if(equals(parameters('tikaService'), 'tika'), concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),5)), '.20'), 'none')]",
             "tikaVmName": "[concat('tika-vm-',variables('resourceprefix'))]",
