@@ -1073,7 +1073,6 @@
             "elasticNicName1": "[concat('elastic-vm-nic-01-',variables('resourceprefix'))]",
             "elasticNicName2": "[concat('elastic-vm-nic-02-',variables('resourceprefix'))]",
             "elasticNicName3": "[concat('elastic-vm-nic-03-',variables('resourceprefix'))]",
-            "elasticScriptFilename": "install_elastic.sh",
             "elasticVm1IP": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),4)), '.20')]",
             "elasticVm2IP": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),4)), '.21')]",
             "elasticVm3IP": "[concat( variables('octets')[0], '.', variables('octets')[1], '.', string(add(int(variables('octets')[2]),4)), '.22')]",
