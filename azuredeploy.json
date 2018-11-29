@@ -755,30 +755,6 @@
             }
         },
         {
-            "condition": "[and(equals(parameters('tikaService'), 'tika'), not(equals(parameters('searchType'), 'none')))]",
-            "type": "Microsoft.Resources/deployments",
-            "apiVersion": "2017-05-10",
-            "dependsOn": [
-                "Microsoft.Resources/deployments/networkTemplate",
-                "Microsoft.Resources/deployments/recoveryTemplate"
-            ],
-            "name": "tikaTemplate",
-            "properties": {
-                "mode": "Incremental",
-                "parameters": {
-                    "moodleCommon": {
-                        "value": "[variables('moodleCommon')]"
-                    },
-                    "subnetIdTika": {
-                        "value": "[reference('networkTemplate').outputs.subnetIdTika.value]"
-                    }
-                },
-                "templateLink": {
-                    "uri": "[concat(variables('moodleCommon').baseTemplateUrl, 'tika.json', parameters('_artifactsLocationSasToken'))]"
-                }
-            }
-        },
-        {
             "condition": "[equals(parameters('fileServerType'),'gluster')]",
             "type": "Microsoft.Resources/deployments",
             "apiVersion": "2017-05-10",
