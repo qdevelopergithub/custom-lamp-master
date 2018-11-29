@@ -81,7 +81,6 @@
         }
     ],
     "variables": {
-        "cmdExec": "[concat('bash ', parameters('moodleCommon').elasticScriptFilename, ' ', parameters('moodleCommon').elasticClusterName, ' ', parameters('moodleCommon').elasticVm1IP, ' ', parameters('moodleCommon').elasticVm2IP, ' ', parameters('moodleCommon').elasticVm3IP)]",
         "documentation01": "This sub-template applies a specific post-deployment script to the controller vm",
         "documentation02": "It expects certain values in the 'common' datastructure.",
         "documentation03": "    scriptLocation              - web URI",
