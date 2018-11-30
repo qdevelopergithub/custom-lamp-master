@@ -86,10 +86,13 @@ check_fileServerType_param $fileServerType
     install_php_mssql_driver
   fi
 
+  # my custom commands to install wordpress
   wget -c http://wordpress.org/latest.tar.gz
   tar -xzvf latest.tar.gz
   sudo mkdir -p /var/www/html/
   sudo rsync -av wordpress/* /var/www/html/
+  sudo chown -R www-data:www-data /var/www/html/
+  sudo chmod -R 755 /var/www/html/
 
   # PHP Version
   PhpVer=$(get_php_version)
