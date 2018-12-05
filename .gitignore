@@ -115,3 +115,6 @@ node_modules
 # Specific azuredeploy.parameters.json files for dev testing (ignored not to expose ssh pub keys)
 .params/
 .vs/
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
